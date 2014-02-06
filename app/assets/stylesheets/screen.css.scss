@@ -24,6 +24,7 @@
 .item {
   display: inline-block;
   padding-top: 50px;
+  margin: 0;
   &:hover {
     // background-color: darken(white, 5%);
   }
@@ -80,7 +81,7 @@
           }
         }
     .item_description {
-      margin: 25px 0 0 0;
+      margin: 25px 0 100px 0;
     }
   }
 }
