@@ -44,7 +44,7 @@ class ItemsController < ApplicationController
 
   def destroy
     @item = Item.find_by(id: params[:id])
-    @item.destroy
+    @item.destroy if @item.id == session[:item_id]
 
     redirect_to items_url, notice: "Item deleted."
   end
