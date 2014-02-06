@@ -12,6 +12,10 @@
 
   }
 }
+
+.cart_link {
+  font-size: 14px;
+}
 .logo {
   padding-top: 10px;
   text-align: center;
@@ -20,7 +24,7 @@
     height: 100px;
     width: 100px;
   }
-  h5 {
+  h5, a {
     text-decoration: none;
     color: black;
   }
@@ -28,6 +32,11 @@
 
 .cart_link {
   padding: 10px 0 10px 0;
+  text-decoration: none;
+  color: black;
+      &:hover {
+        text-decoration: underline;
+      }
 }
 
 // INDEX
@@ -36,7 +45,7 @@
   padding-top: 50px;
   // margin: 0;
   &:hover {
-    // background-color: darken(white, 5%);
+    // background-color: darken(gray, 5%);
   }
   .info {
     padding: 15px 0 5px 0;
@@ -52,6 +61,7 @@
       &:hover {
         text-decoration: underline;
       }
+
     }
     .shop_button {
     border: 1px solid black;
@@ -97,4 +107,11 @@
       margin: 25px 0 100px 0;
     }
   }
+}
+// FOOTER
+
+footer {
+  margin-top: 60px;
+  padding: 20px 0 0 10px;
+
 }

@@ -5,6 +5,7 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 </head>
 <body>
 
@@ -14,7 +15,8 @@
       <img src="assets/robford.jpg">
       <h5><%= link_to "Rob Ford's Favorite Things", root_url %></h5>
     </div>
-    <a href="" class="cart_link grid_2 prefix_9">View Cart</a>
+    <a href="" class="cart_link grid_2 prefix_9"> <i class="fa fa-shopping-cart fa-2x"></i> View Cart</a>
+
     <div class="categories  prefix_6">
       <a href="" class="category grid_2">Must Haves</a>
       <a href="" class="category grid_2">Wearables</a>
@@ -23,7 +25,13 @@
     </div>
   </nav>
 
+
 <%= yield %>
+
+  <footer class="topnav grid_16">
+    <p>Rob Ford's Favorite Things and What Not</p>
+  </footer>
+
 </div>
 </body>
 </html>
