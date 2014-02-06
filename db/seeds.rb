@@ -10,7 +10,7 @@ Item.create(
   title: 'Fresh Unicorn Meat',
   price: '4',
   description: 'The most magical meat when you are high and inebriated.',
-  image: '/unicorn.jpg',
+  image: 'unicorn.jpg',
   itemnumber: '1' )
 Item.create(
   title: 'Mushroom Chair',

@@ -1,0 +1,87 @@
+// NAV
+.category {
+  border: 1px solid black;
+  padding: 3px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  transition: all 300ms ease;
+  &:hover {
+    background-color: black;
+    color: white;
+
+  }
+}
+.logo {
+  padding-top: 40px;
+}
+
+.cart_link {
+  padding: 10px 0 10px 0;
+}
+
+// INDEX
+.item {
+  display: inline-block;
+  padding-top: 50px;
+  margin: 0;
+  &:hover {
+    // background-color: darken(white, 5%);
+  }
+  .info {
+    padding: 15px 0 5px 0;
+    h6 {
+      margin: 0;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .shop_button {
+    border: 1px solid black;
+    padding: 3px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    transition: all 300ms ease;
+    &:hover {
+      background-color: black;
+      color: white;
+
+      }
+    }
+  }
+}
+
+// ITEM SHOW PAGE
+.item_box {
+  .big_image {
+    img {
+      max-width: 500px;
+      max-height: 275px;
+    }
+  }
+  .item_title {
+    padding-left: 80px;
+    .add_to_cart {
+        border: 1px solid black;
+        margin: 0;
+        padding: 3px;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        transition: all 300ms ease;
+        &:hover {
+          background-color: black;
+          color: white;
+
+          }
+        }
+    .item_description {
+      margin: 25px 0 100px 0;
+    }
+  }
+}
