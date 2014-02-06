@@ -1,4 +1,6 @@
 Robfordshop::Application.routes.draw do
+
+  root 'items#index'
   # Routes for the Item resource:
   # CREATE
   get '/items/new', controller: 'items', action: 'new', as: 'new_item'
@@ -14,6 +16,23 @@ Robfordshop::Application.routes.draw do
 
   # DELETE
   delete '/items/:id', controller: 'items', action: 'destroy'
+
+
+  # Routes for the order resource:
+  # CREATE
+  get '/orders/new', controller: 'orders', action: 'new', as: 'new_order'
+  post '/orders', controller: 'orders', action: 'create', as: 'orders'
+
+  # READ
+  get '/orders', controller: 'orders', action: 'index'
+  get '/orders/:id', controller: 'orders', action: 'show', as: 'order'
+
+  # UPDATE
+  get '/orders/:id/edit', controller: 'orders', action: 'edit', as: 'edit_order'
+  patch '/orders/:id', controller: 'orders', action: 'update'
+
+  # DELETE
+  delete '/orders/:id', controller: 'orders', action: 'destroy'
   #------------------------------
 
   # The priority is based upon order of creation: first created -> highest priority.

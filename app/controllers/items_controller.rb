@@ -33,9 +33,10 @@ class ItemsController < ApplicationController
     @item.title = params[:title]
     @item.price = params[:price]
     @item.image = params[:image]
+    @item.order_id = params[:order_id]
 
     if @item.save
-      redirect_to items_url, notice: "Item updated successfully."
+      redirect_to items_url, notice: "Added to your cart."
     else
       render 'edit'
     end

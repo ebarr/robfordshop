@@ -5,7 +5,7 @@
   <div class="item_title grid_6 prefix_1">
     <h1><%= @item.title %></h1>
     <p>$<%= @item.price %>.00</p>
-    <a href="" class="add_to_cart grid_3">Add to Cart</a>
+    <span><%=  link_to "Add to Cart", @item, contoller: "items", action: "update", order_id: 1, class: "add_to_cart grid_3" %></span>
     <div class="item_description grid_6">
       <p><%= @item.description %></p>
       <p>Item number: <%= @item.itemnumber %></p>
@@ -20,7 +20,7 @@
       <%= link_to image_tag(item.image, size: '220'), item_url(item.id) %>
       <div class="info">
         <h6><%= link_to item.title, item_url(item.id) %></h6>
-        $<%= item.price %><br>
+        <p>$<%= item.price %></p><br>
       </div>
     </div>
   <% end %>
