@@ -13,7 +13,13 @@
   }
 }
 .logo {
-  padding-top: 40px;
+  padding-top: 10px;
+  text-align: center;
+  img {
+    border-radius: 50px;
+    height: 100px;
+    width: 100px;
+  }
   h5 {
     text-decoration: none;
     color: black;
