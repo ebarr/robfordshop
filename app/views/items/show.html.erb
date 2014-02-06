@@ -1,18 +1,15 @@
-<h1>Item #<%= @item.id %></h1>
+<div class="item_box container_14 prefix_1">
+  <div class="big_image grid_7">
+    <%= image_tag(@item.image, size: '100%') %>
+  </div>
+  <div class="item_title grid_6 prefix_1">
+    <h1><%= @item.title %></h1>
+    <p>$<%= @item.price %>.00</p>
+    <a href="" class="add_to_cart grid_3">Add to Cart</a>
+    <div class="item_description grid_6">
+      <p><%= @item.description %></p>
+      <p>Item number: <%= @item.itemnumber %></p>
+    </div>
+  </div>
 
-<dl>
-  <dt>Title</dt>
-  <dd><%= @item.title %></dd>
-
-  <dt>Price</dt>
-  <dd><%= @item.price %></dd>
-
-  <dt>Image</dt>
-  <dd><%= @item.image %></dd>
-
-  <dt>Description</dt>
-  <dd><%= @item.description %></dd>
-
-  <dt>Item Number</dt>
-  <dd><%= @item.itemnumber %></dd>
-</dl>
+</div>
