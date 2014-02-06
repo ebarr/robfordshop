@@ -1,0 +1,30 @@
+<h1>Items</h1>
+
+<p><%= link_to 'Add a New Item', new_item_url %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Price</th>
+      <th>Image</th>
+      <th>Description</th>
+      <th>Item-Number</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @items.each do |item| %>
+    <tr>
+      <td><%= item.title %></td>
+      <td><%= item.price %></td>
+      <td><%= item.image %></td>
+      <td><%= link_to 'Show', item_url(item) %></td>
+      <td><%= link_to 'Edit', edit_item_url(item) %></td>
+      <td><%= link_to 'Destroy', item_url(item), method: 'delete', data: { confirm: "Do you really want to delete this item?" } %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
