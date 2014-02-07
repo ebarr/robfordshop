@@ -31,6 +31,7 @@
 
 .cart_link {
   padding: 10px 0 10px 0;
+  // margin: 0;
   text-decoration: none;
   color: black;
   font-size: 14px;
@@ -39,6 +40,10 @@
         color: black;
         background-color: white;
       }
+}
+.fa-2x {
+  font-size: 14px;
+  // margin-right: 15px;
 }
 
 // INDEX
