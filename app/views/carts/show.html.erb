@@ -18,9 +18,9 @@
 </ul>
 
 <ul class="order_box grid_5">
-  <%= link_to 'Submit My Order', root_url, class: "submit grid_4", data: { popup: 'Nice try, Asshole!' } %>
+  <%= link_to 'Submit My Order', root_url, class: "submit grid_4" %>
   <li class="grid_5">Shipping:
-    <% if @cart.total_price > 50 %>
+    <% if @cart.total_price.to_i > 50 %>
     Free
     <% else %>
     $9.99
