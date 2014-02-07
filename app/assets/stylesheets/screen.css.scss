@@ -50,7 +50,9 @@
 .item {
   display: inline-block;
   padding-top: 50px;
-  // margin: 0;
+  &.draggable {
+    border: 1px solid black;
+  }
   &:hover {
   }
   .info {
@@ -84,6 +86,14 @@
       }
     }
   }
+}
+.cart {
+  border: 2px solid black;
+  text-align: center;
+  &.droppable {
+        background:lightyellow;
+        border: 2px dashed black;
+    }
 }
 
 // ITEM SHOW PAGE
