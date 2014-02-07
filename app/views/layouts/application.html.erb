@@ -12,7 +12,7 @@
 <div class="container_16">
   <nav class="topnav grid_16">
     <div class="logo grid_4">
-      <img src="assets/robford.jpg">
+      <%= image_tag('robford.jpg', size: '220') %>
       <h5><%= link_to "Rob Ford's Favorite Things", root_url %></h5>
     </div>
     <% if session[:cart_id] %>
