@@ -78,6 +78,42 @@ Item.create(
     description: 'I am the Toronto Bigfoot. If you catch a glimpse of me you should consider yourself lucky.',
     image: 'bigfoot.jpg',
     itemnumber: '12')
+  Item.create(
+    title: 'Drug Storage Shelf',
+    price: '40',
+    description: 'This is where I hide everything from my wife, police and just snoopy people in general. I do not go to your house to snoop and it has nothing to do with my job.',
+    image: 'batshelf.jpg',
+    itemnumber: '13')
+  Item.create(
+    title: 'Councillor Punishment Beard',
+    price: '30',
+    description: 'This is what I make the Councillor wear when she is mean to me. It is only funny cause she is a woman and they do not wear beards.',
+    image: 'bees.jpg',
+    itemnumber: '14')
+  Item.create(
+    title: 'Tattooed Woman Friend',
+    price: '450',
+    description: 'This one is obvious. She is my lady friend who you can see for an affordable price. She is young and likes to wear Disney clothes.',
+    image: 'kiss.jpeg',
+    itemnumber: '15')
+  Item.create(
+    title: 'Tattooed Woman Hat',
+    price: '20',
+    description: 'This is what the tattooed woman friends like to wear. It is safe, fun and portable.',
+    image: 'fez.jpg',
+    itemnumber: '16')
+   Item.create(
+    title: 'Mustache',
+    price: '15',
+    description: 'Come on do not make me say it. We have all seen Super Troopers. Grow up.',
+    image: 'mustache.jpg',
+    itemnumber: '17')
+   Item.create(
+    title: 'Me on a Shirt',
+    price: '50',
+    description:  'Great gift for all Rob Ford fans. They will love you forever once you get them this.',
+    image: 'bigfoot-sweater.jpg',
+    itemnumber: '18')
 
 
 

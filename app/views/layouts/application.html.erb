@@ -9,27 +9,27 @@
 </head>
 <body>
 
-<div class="container_16">
-  <nav class="topnav grid_16">
-    <div class="logo grid_4">
-      <%= image_tag('robford.jpg', size: '220') %>
+<div class="container">
+  <nav class="topnav">
+    <div class="logo">
+      <%= link_to image_tag('robford.jpg', size: '220'), root_url %>
       <h5><%= link_to "Rob Ford's Favorite Things", root_url %></h5>
     </div>
     <% if session[:cart_id] %>
       <% @cart = Cart.find(session[:cart_id]) %>
       <% if @cart.line_items.count > 1 %>
-        <span><%= link_to " #{@cart.line_items.count} items in your cart", cart_url(session[:cart_id]), class: "cart_link grid_2 prefix_9 fa fa-shopping-cart fa-2x" %></span>
+        <span><%= link_to " #{@cart.line_items.count} items in your cart", cart_url(session[:cart_id]), class: "cart_link fa fa-shopping-cart fa-2x" %></span>
       <% else %>
-        <span><%= link_to " #{@cart.line_items.count} item in your cart", cart_url(session[:cart_id]), class: "cart_link grid_2 prefix_9 fa fa-shopping-cart fa-2x" %></span>
+        <span><%= link_to " #{@cart.line_items.count} item in your cart", cart_url(session[:cart_id]), class: "cart_link fa fa-shopping-cart fa-2x" %></span>
       <% end %>
     <% else %>
-      <span><%= link_to " I'm empty!", root_url, class: "cart_link grid_2 prefix_9 fa fa-shopping-cart fa-2x" %></span>
+      <span><%= link_to " I'm empty!", root_url, class: "cart_link fa fa-shopping-cart fa-2x" %></span>
     <% end %>
-    <div class="categories  prefix_6">
-      <span><%= link_to "Must Haves", root_url, class: "category grid_2" %></span>
-      <span><%= link_to "Wearables", root_url, class: "category grid_2" %></span>
-      <span><%= link_to "Perishables", root_url, class: "category grid_2" %></span>
-      <span><%= link_to "Face Stuff", root_url, class: "category grid_2" %></span>
+    <div class="categories">
+      <span><%= link_to "Must Haves", root_url, class: "category" %></span>
+      <span><%= link_to "Wearables", root_url, class: "category" %></span>
+      <span><%= link_to "Perishables", root_url, class: "category" %></span>
+      <span><%= link_to "Face Stuff", root_url, class: "category" %></span>
     </div>
   </nav>
 

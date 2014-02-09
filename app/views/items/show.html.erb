@@ -1,22 +1,22 @@
-<div class="item_box container_14 prefix_1">
-  <div class="big_image grid_7">
+<div class="item_box">
+  <div class="big_image">
     <%= image_tag(@item.image, size: '100%') %>
   </div>
-  <div class="item_title grid_6 prefix_1">
+  <div class="item_title">
     <h1><%= @item.title %></h1>
     <p>$<%= @item.price %>.00</p>
-   <span><%= button_to 'Add to Cart', line_items_path(item_id: @item), class: "add_to_cart grid_3" %></span>
-    <div class="item_description grid_6">
+   <span><%= button_to 'Add to Cart', line_items_path(item_id: @item), class: "add_to_cart", remote: true %></span>
+    <div class="item_description">
       <p><%= @item.description %></p>
       <p>Item number: <%= @item.itemnumber %></p>
     </div>
   </div>
 </div>
 
-<div class="other_items container_14 prefix_1">
+<div class="other_items">
   <h5>Other Items:</h5>
   <% Item.all.sample(3).each do |item| %>
-  <div class="item grid_4 suffix_1">
+  <div class="item">
       <%= link_to image_tag(item.image, size: '220'), item_url(item.id) %>
       <div class="info">
         <h6><%= link_to item.title, item_url(item.id) %></h6>

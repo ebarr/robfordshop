@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20140206195233) do
 
   create_table "items", force: true do |t|
     t.string  "title"
-    t.integer "price"
+    t.integer "price",       limit: 255
     t.string  "image"
     t.text    "description"
     t.string  "itemnumber"

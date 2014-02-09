@@ -1,9 +1,10 @@
-<div class="cart grid_16">
+<div class="wrap">
+<div class="store">
   DRAG ITEMS HERE
 </div>
-<ul class="grid_16">
+<ul class="section">
   <% @items.each do |item| %>
-    <li class="item grid_4 prefix_1">
+    <li class="item">
       <%= link_to image_tag(item.image, size: '220'), item_url(item.id) %>
       <div class="info">
         <h6><%= link_to item.title, item_url(item.id) %></h6>
@@ -13,3 +14,4 @@
     </li>
   <% end %>
 </ul>
+</div>
