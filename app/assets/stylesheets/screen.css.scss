@@ -206,60 +206,66 @@ footer {
 // CART
 
 .cart-page {
-  display: inline-block;
-  @include columnify(16);
-  &:nth-child(1n) {
-        margin-right: 0;
-    }
-}
 
-.personal_cart {
-  display: inline-block;
-  @include columnify(8);
-  border: solid black .1em;
-  padding: 10px;
-  margin-bottom: 15px;
-  li {
-    list-style-type: none;
+  ul {
+    @include columnify(9);
+    display: inline-block;
+    margin-right: $gutter_width;
   }
-  img {
-    max-width: 150px;
-    max-height: 130px;
-  }
-  .remove {
-    position: relative;
-    bottom: 200px;
-    left: 400px;
-    background-color: white;
-    border: 1px solid black;
-    transition: all 300ms ease;
-    &:hover {
-      background-color: red;
-      color: white;
+  .personal_cart {
+    border: solid black .1em;
+    padding: 10px;
+    margin-bottom: 15px;
+    max-height: 150px;
+      li {
+        list-style-type: none;
+      }
+      .grid_2 {
+         position: relative;
+        left: 160px;
+        bottom: 100px;
+      }
+      img {
+        position: relative;
+        left: 0;
+        top: 0;
+        max-width: 150px;
+        max-height: 130px;
+      }
+    .remove {
+      position: relative;
+      bottom: 180px;
+      left: 85%;
+      background-color: white;
+      border: 1px solid black;
+      transition: all 300ms ease;
+      &:hover {
+        background-color: red;
+        color: white;
+      }
     }
   }
-}
 
-.order_box {
-  display: inline-block;
-  @include columnify(6);
-  @include offset(10);
-  border: 1px solid black;
-  padding: 10px 0 10px 10px;
-  li {
-    margin-top: 20px;
-    list-style-type: none;
-  }
-  .submit {
+  .order_box {
+    @include columnify(5);
+    display: inline-block;
     border: 1px solid black;
-    padding: 3px;
-    text-align: center;
-    text-decoration: none;
-    color: black;
-    transition: all 300ms ease;
-    &:hover {
-      background-color: #4fc359;
-      color: white;
+    padding: 10px 0 10px 10px;
+    li {
+      margin-top: 20px;
+      list-style-type: none;
+    }
+    .submit {
+      border: 1px solid black;
+      padding: 3px;
+      text-align: center;
+      text-decoration: none;
+      color: black;
+      transition: all 300ms ease;
+      &:hover {
+        background-color: #4fc359;
+        color: white;
+      }
     }
   }
 }
