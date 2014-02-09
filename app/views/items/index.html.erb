@@ -5,7 +5,7 @@
 <ul class="section">
   <% @items.each do |item| %>
     <li class="item">
-      <%= link_to image_tag(item.image, size: '220'), item_url(item.id) %>
+      <%= image_tag(item.image, size: '220') %>
       <div class="info">
         <h6><%= link_to item.title, item_url(item.id) %></h6>
         <p>$<%= item.price %></p><br>

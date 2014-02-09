@@ -30,24 +30,31 @@ $col_width: ($max_width - $total_gutter_width) / $col_count;
 
 
 // NAV
-.category {
-  @include offset(3);
-  border: 1px solid black;
-  padding: 3px;
-  text-align: center;
-  text-decoration: none;
-  color: black;
-  transition: all 300ms ease;
-  margin-bottom: 20px;
-  a {
+.categories {
+  @include columnify(8);
+  @include offset(8);
+  display: inline-block;
+  .category {
+    @include columnify(2);
+    // @include offset(1);
     display: inline-block;
-    @include columnify(5);
-    margin-right: $gutter_width;
+    border: 1px solid black;
+    padding: 3px 0 3px 0;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    transition: all 300ms ease;
+    margin-bottom: 20px;
+    a {
+      // display: inline-block;
+      // @include columnify(1);
+      // margin-right: $gutter_width;
 
-  }
-  &:hover {
-    background-color: black;
-    color: white;
+    }
+    &:hover {
+      background-color: black;
+      color: white;
+    }
   }
 }
 
@@ -59,6 +66,7 @@ $col_width: ($max_width - $total_gutter_width) / $col_count;
   padding-top: 10px;
   text-align: center;
   @include columnify(4);
+  display: inline-block;
   img {
     border-radius: 50px;
     height: 100px;
@@ -74,7 +82,9 @@ $col_width: ($max_width - $total_gutter_width) / $col_count;
 }
 
 .cart_link {
-  padding: 10px 0 10px 0;
+  @include columnify(2);
+  @include offset(9);
+  // padding: 10px 0 10px 0;
   // margin: 0;
   text-decoration: none;
   color: black;
@@ -85,17 +95,15 @@ $col_width: ($max_width - $total_gutter_width) / $col_count;
         background-color: white;
       }
 }
-.fa-2x {
-  font-size: 14px;
-}
 
 
 // INDEX
 
 .item {
+  @include columnify(4);
+  @include offset(1);
   display: inline-block;
   padding-top: 50px;
-  @include columnify(4);
   margin-right: $gutter_width;
   margin-bottom: 20px;
   height: 200px;
@@ -109,6 +117,7 @@ $col_width: ($max_width - $total_gutter_width) / $col_count;
   }
   .info {
     padding: 15px 0 5px 0;
+    // border-bottom: 1px solid gray;
     h6 {
       margin: 0;
     }
