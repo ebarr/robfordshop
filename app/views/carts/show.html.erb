@@ -4,14 +4,14 @@
 
 
 <h2>Your Cart</h2>
-
+<div class="cart-page">
 <ul>
 <% @cart.line_items.each do |item| %>
-<div class="personal_cart grid_9">
+<div class="personal_cart">
   <li class="grid_3"><%= image_tag(item.item.image, size: '100%') %></li>
-  <li class="grid_3"><h5><%= item.item.title %></h5></li>
-  <li class="grid_3">Price: $<%= item.item.price %>.00</li>
-  <li class="grid_3">Quantity: <%= item.quantity %></li>
+  <li class="grid_2"><h5><%= item.item.title %></h5></li>
+  <li class="grid_2">Price: $<%= item.item.price %>.00</li>
+  <li class="grid_2">Quantity: <%= item.quantity %></li>
   <span><%= button_to 'Remove', item, method: :delete, class: "remove fa fa-times" %></span>
   </div>
   <% end %>
@@ -32,4 +32,5 @@
 <div class="empty grid_8">
   <%= button_to 'Empty Cart', @cart, method: :delete %>
 
+</div>
 </div>
